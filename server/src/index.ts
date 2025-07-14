@@ -10,7 +10,7 @@ import userRouter from "./routes/user.route";
 
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin: ["https://blog-it-ruddy.vercel.app/"],
     methods: ["POST", "GET", "PUT", "PATCH", "DELETE"],
     credentials: true,
   }),
