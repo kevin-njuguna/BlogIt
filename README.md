@@ -4,7 +4,7 @@
 
 ##  Live Demo
 
-[👉 View Live Project](https://your-deployment-url.com)
+[👉 View Live Project](https://blog-it-ruddy.vercel.app)
 
 ## Features
 
