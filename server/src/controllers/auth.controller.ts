@@ -58,7 +58,11 @@ export const login = async (req: Request, res: Response) => {
     //match, create token to identify user
     const {password: loginPassword, createdAt, updatedAt, ...userDetails} = user;
     const token = jwt.sign(userDetails, process.env.JWT_SECRET!)
-    res.cookie("authToken", token).json(userDetails)
+    res.cookie("authToken", token, {
+    httpOnly: true,
+    secure: true, 
+    sameSite: "none"
+});
 
     res.send(user)
     
