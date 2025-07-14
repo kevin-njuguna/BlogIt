@@ -60,7 +60,7 @@ export const login = async (req: Request, res: Response) => {
     const token = jwt.sign(userDetails, process.env.JWT_SECRET!)
     res.cookie("authToken", token).json(userDetails)
 
-    //res.send(user)
+    res.send(user)
     
     } catch (e) {
         console.log(e)
