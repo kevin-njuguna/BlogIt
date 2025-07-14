@@ -65,6 +65,7 @@ export const login = async (req: Request, res: Response) => {
 });
 
     //res.send(user)
+    res.json(userDetails)
     
     } catch (e) {
         console.log(e)
@@ -91,6 +92,10 @@ export default function authenticate(req: AuthRequest, res: Response, next: Next
 }
 
 export const logout = (_req: Request, res: Response) => {
-  res.clearCookie('authToken', { httpOnly: true, sameSite: 'lax' });
-  res.status(200).json({ message: 'Logged out successfully' });
+  res.clearCookie("authToken", {
+    httpOnly: true,
+    secure: true,
+    sameSite: "none",
+  });
+  res.status(200).json({ message: "Logged out successfully" });
 };
