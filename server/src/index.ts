@@ -1,7 +1,8 @@
 import express, { Express } from "express";
 
-const app: Express = express();
+
 import cors from "cors";
+const app: Express = express();
 import cookieParser from "cookie-parser";
 
 import authRouter from "./routes/auth.route";
@@ -10,7 +11,7 @@ import userRouter from "./routes/user.route";
 
 app.use(
   cors({
-    origin: ["https://blog-it-ruddy.vercel.app/"],
+    origin: ["https://blog-it-ruddy.vercel.app"],
     methods: ["POST", "GET", "PUT", "PATCH", "DELETE"],
     credentials: true,
   }),
