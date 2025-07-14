@@ -64,7 +64,7 @@ export const login = async (req: Request, res: Response) => {
     sameSite: "none"
 });
 
-    res.send(user)
+    //res.send(user)
     
     } catch (e) {
         console.log(e)
