@@ -34,7 +34,6 @@ const Login = () => {
       const response = await axiosInstance.post(
         "/api/auth/login",
         loginDetails,
-        { withCredentials: true }
       );
       console.log(response.data);
       return response.data;
