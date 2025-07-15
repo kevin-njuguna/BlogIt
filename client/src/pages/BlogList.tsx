@@ -68,7 +68,7 @@ const BlogList = () => {
                   </Typography>
 
                   <Box display="flex" alignItems="center" gap={1}>
-                    <Avatar sx={{ width: 26, height: 24 }}>
+                    <Avatar sx={{ width: 30, height: 24 }}>
                       {blog.author.firstName[0]}
                       {blog.author.lastName[0]}
                     </Avatar>
